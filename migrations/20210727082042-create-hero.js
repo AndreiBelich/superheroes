@@ -11,7 +11,8 @@ module.exports = {
       nickname: {
         field: "nickname",
         allowNull: false,
-        type: Sequelize.STRING(64)
+        type: Sequelize.STRING(64),
+        unique: true
       },
       realName: {
         field: "real_name",
@@ -28,14 +29,6 @@ module.exports = {
         field: "origin_description",
         allowNull: false,
         type: Sequelize.STRING(512)
-      },
-      superpowers: {
-        allowNull: false,
-        type: Sequelize.INTEGER
-      },
-      images: {
-        allowNull: true,
-        type: Sequelize.INTEGER
       },
       createdAt: {
         field: "created_at",
